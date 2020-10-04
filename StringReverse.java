@@ -1,47 +1,12 @@
-// java program to print reverse 
-// of words in a string. 
-import java.io.*; 
-import java.util.*; 
-import java.lang.*; 
+// Write a program that takes a String from the user on the command-line and print it in reverse.
 
-class GFG 
+class StringReverse 
 { 
-static String wordReverse(String str) 
-{ 
-	int i = str.length() - 1; 
-	int start, end = i + 1; 
-	String result = ""; 
-	
-	while(i >= 0) 
-	{ 
-		if(str.charAt(i) == ' ') 
-		{ 
-			start = i + 1; 
-			while(start != end) 
-				result += str.charAt(start++); 
-			
-			result += ' '; 
-			
-			end = i; 
-		} 
-		i--; 
+	public static void main(String[] args) {
+		for(int i=args.length-1; i>=0; i--) {
+			System.out.print(args[i] + " ");
+		}
+		 
 	} 
-	
-	start = 0; 
-	while(start != end) 
-		result += str.charAt(start++); 
-	
-	return result; 
 } 
 
-// Driver code 
-public static void main(String[] args) 
-{ 
-	String str = "I AM A GEEK"; 
-	
-	System.out.print(wordReverse(str)); 
-} 
-} 
-
-// This code is contributed 
-// by Akanksha Rai(Abby_akku) 
